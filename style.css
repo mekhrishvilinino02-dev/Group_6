@@ -895,7 +895,9 @@ body {
     transition: var(--transition); 
 }
 
-/* --- ENTERPRISE RESPONSIVE FRAMEWORK --- */
+/* --- ENTERPRISE RESPONSIVE FRAMEWORK (FIXED & OPTIMIZED) --- */
+
+/* ტაბლეტის ვერსია (992px) */
 @media (max-width: 992px) {
     .hero-flex { 
         flex-direction: column; 
@@ -934,6 +936,7 @@ body {
     }
 }
 
+/* მცირე ტაბლეტები და სმარტფონები (768px) */
 @media (max-width: 768px) {
     .menu-toggle { 
         display: flex; 
@@ -963,5 +966,31 @@ body {
     
     .auth-card { 
         padding: 40px 24px; 
+    }
+}
+
+
+@media (max-width: 600px) {
+    .hero-text h1 { 
+        font-size: 30px !important; 
+        line-height: 1.25;
+    }
+    
+    .hero-img img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .service-card, 
+    .blog-card,
+    .pricing-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .container {
+        padding: 0 16px !important;
     }
 }

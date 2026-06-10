@@ -43,6 +43,27 @@ renderHero();
     </div>
 </section>
 
+<!-- [NEW] სტატისტიკების სექცია count-up ანიმაციით -->
+<section class="stats-section">
+    <div class="container stats-container">
+        <div class="stats-text">
+            <h2>Helping a local <span>business reinvent itself</span></h2>
+            <p>We reached here with our hard work and dedication</p>
+        </div>
+        <div class="stats-grid-box">
+            <?php foreach ($stats as $stat): ?>
+            <div class="stat-item">
+                <span class="stat-emoji"><?= $stat['icon'] ?></span>
+                <div>
+                    <h3><?= $stat['count'] ?></h3>
+                    <p><?= $stat['label'] ?></p>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <section class="container blog-section" id="blog">
     <div class="section-header">
         <h2 class="section-title">Caring is the new marketing</h2>

@@ -39,7 +39,9 @@ function renderHeader() {
                 } else {
                     echo '<li><a href="register.php" class="btn-primary">Register Now</a></li>';
                 }
-    echo '</ul></div></header>';
+    echo '</ul>
+            <button id="dark-mode-btn" title="Toggle Dark Mode">🌙</button>
+          </div></header>';
 }
 
 function renderHero() {
@@ -59,7 +61,20 @@ function renderHero() {
 }
 
 function renderFooter() {
-    echo '<footer class="site-footer"><div class="container">
+    echo '
+    <!-- [NEW] Blog Modal -->
+    <div class="blog-modal-overlay" id="blog-modal">
+        <div class="blog-modal-box">
+            <button class="blog-modal-close" id="modal-close">✕</button>
+            <img src="" alt="" class="blog-modal-img" id="modal-img">
+            <div class="blog-modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-excerpt"></p>
+                <p>Our community platform helps organizations streamline operations and build lasting member relationships through innovative digital tools.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer"><div class="container">
             <p>&copy; ' . date('Y') . ' Nexcent Open Portal. All rights reserved.</p>
           </div></footer>
           <script src="script.js"></script></body></html>';

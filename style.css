@@ -28,54 +28,6 @@ body {
     background-color: var(--white);
     line-height: 1.65;
     overflow-x: hidden;
-    transition: background 0.4s, color 0.4s;
-}
-
-/* [NEW] Dark Mode */
-body.dark-mode {
-    --white: #1A1F2E;
-    --neutral-light: #242B3D;
-    --secondary: #E8EDF2;
-    --neutral-dark: #C8D0DC;
-    --neutral-grey: #8A95A3;
-    background-color: #131720;
-    color: #C8D0DC;
-}
-body.dark-mode .site-header {
-    background-color: rgba(19, 23, 32, 0.95) !important;
-    border-bottom: 1px solid #2A3142;
-}
-body.dark-mode .service-card,
-body.dark-mode .blog-card,
-body.dark-mode .pricing-card,
-body.dark-mode .auth-card,
-body.dark-mode .faq-item {
-    background-color: #1E2538;
-    border-color: #2A3142;
-}
-body.dark-mode .hero {
-    background-color: #1A1F2E;
-}
-body.dark-mode .stats-section {
-    background-color: #1A1F2E !important;
-}
-body.dark-mode .nav-links {
-    background-color: #1A1F2E;
-}
-body.dark-mode .blog-modal-box {
-    background-color: #1E2538;
-}
-body.dark-mode .blog-modal-body h2 { color: #E8EDF2; }
-body.dark-mode .blog-modal-close {
-    background-color: #2A3142;
-    color: #C8D0DC;
-}
-body.dark-mode #dark-mode-btn {
-    border-color: #2A3142;
-    color: #C8D0DC;
-}
-body.dark-mode .menu-toggle span {
-    background-color: #C8D0DC;
 }
 
 .container {
@@ -193,45 +145,6 @@ body.dark-mode .menu-toggle span {
 
 .nav-link-item:hover { 
     color: var(--primary);
-}
-
-/* [NEW] Active page nav link */
-.nav-link-item.nav-active {
-    color: var(--primary) !important;
-    font-weight: 700;
-    position: relative;
-}
-.nav-link-item.nav-active::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary);
-    border-radius: 2px;
-}
-
-/* [NEW] Dark mode toggle button */
-#dark-mode-btn {
-    background: none;
-    border: 1px solid #E0E0E0;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    flex-shrink: 0;
-    margin-left: 8px;
-}
-#dark-mode-btn:hover {
-    background-color: rgba(76,175,80,0.1);
-    border-color: var(--primary);
-    transform: rotate(20deg);
 }
 
 .user-welcome { 
@@ -444,7 +357,7 @@ body.dark-mode .menu-toggle span {
 /* Blog Section */
 .blog-section { 
     margin-top: 100px; 
-    margin-bottom: 100px; 
+    margin-bottom: 40px; 
 }
 
 /* --- METRICS / METADATA AREA --- */
@@ -704,83 +617,6 @@ body.dark-mode .menu-toggle span {
     text-decoration: none;
 }
 
-/* --- BLOG MODAL [NEW] --- */
-.blog-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(6px);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.blog-modal-overlay.modal-open {
-    display: flex;
-    opacity: 1;
-}
-.blog-modal-box {
-    background: var(--white);
-    border-radius: 20px;
-    max-width: 680px;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.2);
-    animation: modalSlideUp 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    position: relative;
-}
-@keyframes modalSlideUp {
-    from { transform: translateY(40px) scale(0.97); opacity: 0; }
-    to   { transform: translateY(0) scale(1); opacity: 1; }
-}
-.blog-modal-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-}
-.blog-modal-body {
-    padding: 32px 36px 40px;
-}
-.blog-modal-body h2 {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--secondary);
-    line-height: 1.4;
-    margin-bottom: 16px;
-}
-.blog-modal-body p {
-    color: var(--neutral-grey);
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-.blog-modal-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(255,255,255,0.9);
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: var(--transition);
-    z-index: 10;
-}
-.blog-modal-close:hover {
-    background-color: var(--primary);
-    color: white;
-    transform: rotate(90deg);
-}
-
 /* --- CORE PRICING TABLES --- */
 .pricing-grid {
     display: flex;
@@ -932,12 +768,12 @@ body.dark-mode .menu-toggle span {
 
 /* --- ACCOUNT OPERATIONS DESIGN --- */
 .auth-container { 
-    padding: 100px 24px; 
+    padding: 60px 24px; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
     background-color: #FAFAFA;
-    min-height: 80vh; 
+    min-height: auto; 
 }
 
 .auth-card { 

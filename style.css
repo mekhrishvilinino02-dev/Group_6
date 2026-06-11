@@ -59,7 +59,6 @@ body.dark-mode .blog-modal-body h2 { color: #E8EDF2; }
 body.dark-mode .blog-modal-close { background-color: #2A3142; color: #C8D0DC; }
 body.dark-mode #dark-mode-btn { border-color: #2A3142; color: #C8D0DC; }
 body.dark-mode .menu-toggle span { background-color: #C8D0DC; }
-body.dark-mode .auth-container { background-color: #131720; }
 body.dark-mode .site-footer { 
     background-color: #0D1117 !important;
     color: #9CA3AF !important;

@@ -60,7 +60,10 @@ body.dark-mode .blog-modal-close { background-color: #2A3142; color: #C8D0DC; }
 body.dark-mode #dark-mode-btn { border-color: #2A3142; color: #C8D0DC; }
 body.dark-mode .menu-toggle span { background-color: #C8D0DC; }
 body.dark-mode .auth-container { background-color: #131720; }
-body.dark-mode .site-footer { background-color: #0D1117 !important; }
+body.dark-mode .site-footer { 
+    background-color: #0D1117 !important;
+    color: #9CA3AF !important;
+}
 body.dark-mode .form-group input { background-color: #1E2538 !important; border-color: #2A3142 !important; color: #C8D0DC !important; }
 
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }

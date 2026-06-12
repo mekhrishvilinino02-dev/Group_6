@@ -45,6 +45,31 @@ body.dark-mode .site-header {
     background-color: rgba(19, 23, 32, 0.95) !important;
     border-bottom: 1px solid #2A3142;
 }
+
+/*  ფუტერის გასამუქებლად */
+body.dark-mode .site-footer {
+    background-color: #131720 !important;
+    border-top: 1px solid #2A3142;
+    color: #8A95A3;
+}
+
+/* ავტორიზაციის გვერდის თეთრი ფონის გასამუქებლად */
+body.dark-mode .auth-container {
+    background-color: #131720 !important;
+}
+
+/* ინპუტები და სერჩის ველიც რომ მუქი იყოს */
+body.dark-mode .form-group input,
+body.dark-mode .search-box-mock input {
+    background-color: #1E2538;
+    color: #E8EDF2;
+    border-color: #2A3142;
+}
+body.dark-mode .form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.25);
+}
+
 body.dark-mode .service-card,
 body.dark-mode .blog-card,
 body.dark-mode .pricing-card,
@@ -76,21 +101,6 @@ body.dark-mode #dark-mode-btn {
 }
 body.dark-mode .menu-toggle span {
     background-color: #C8D0DC;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-.text-center { 
-    text-align: center; 
-}
-
-.page-spacing { 
-    padding: 80px 24px; 
 }
 
 /* --- CORE INTERACTIVE BUTTONS --- */
